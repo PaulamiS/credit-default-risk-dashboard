@@ -1,0 +1,136 @@
+{
+  "n_customers": 30000,
+  "n_train": 24000,
+  "n_test": 6000,
+  "overall_default_rate": 0.2212,
+  "n_trees": 193,
+  "decision_threshold": 0.3,
+  "segment_cutoffs": {
+    "medium_from": 0.15,
+    "high_from": 0.3
+  },
+  "test_auc_roc": 0.7829037113105138,
+  "test_f1": 0.5426125790844808,
+  "test_precision": 0.5360294117647059,
+  "test_recall": 0.549359457422758,
+  "test_average_precision": 0.5633075378908335,
+  "cv_auc_mean": 0.7874504421052189,
+  "cv_auc_std": 0.004883308697111357,
+  "baseline_logreg_test_auc": 0.741795651106075,
+  "features": [
+    "LIMIT_BAL",
+    "EDUCATION",
+    "MARRIAGE",
+    "AGE",
+    "PAY_1",
+    "PAY_2",
+    "PAY_3",
+    "PAY_4",
+    "PAY_5",
+    "PAY_6",
+    "BILL_AMT1",
+    "BILL_AMT2",
+    "BILL_AMT3",
+    "BILL_AMT4",
+    "BILL_AMT5",
+    "BILL_AMT6",
+    "PAY_AMT1",
+    "PAY_AMT2",
+    "PAY_AMT3",
+    "PAY_AMT4",
+    "PAY_AMT5",
+    "PAY_AMT6",
+    "avg_bill",
+    "avg_payment",
+    "utilization_latest",
+    "utilization_avg",
+    "payment_to_bill_ratio",
+    "max_delay",
+    "months_delayed",
+    "delay_trend",
+    "bill_trend"
+  ],
+  "excluded_from_model": [
+    "SEX"
+  ],
+  "segments": [
+    {
+      "segment": "Low",
+      "customers": 3100,
+      "share_of_customers": 0.5166666666666667,
+      "actual_default_rate": 0.08967741935483871,
+      "share_of_all_defaults": 0.20949510173323285
+    },
+    {
+      "segment": "Medium",
+      "customers": 1540,
+      "share_of_customers": 0.25666666666666665,
+      "actual_default_rate": 0.2077922077922078,
+      "share_of_all_defaults": 0.24114544084400905
+    },
+    {
+      "segment": "High",
+      "customers": 1360,
+      "share_of_customers": 0.22666666666666666,
+      "actual_default_rate": 0.5360294117647059,
+      "share_of_all_defaults": 0.549359457422758
+    }
+  ],
+  "fairness": {
+    "sex": {
+      "groups": [
+        {
+          "group": "Female",
+          "customers": 3598,
+          "flagged_high_risk_rate": 0.21372984991662033,
+          "favorable_rate": 0.7862701500833796,
+          "actual_default_rate": 0.21289605336297943
+        },
+        {
+          "group": "Male",
+          "customers": 2402,
+          "flagged_high_risk_rate": 0.246044962531224,
+          "favorable_rate": 0.753955037468776,
+          "actual_default_rate": 0.23355537052456288
+        }
+      ],
+      "demographic_parity_difference": 0.03231511261460365,
+      "disparate_impact_ratio": 0.9589007510825932
+    },
+    "age_group": {
+      "groups": [
+        {
+          "group": "<30",
+          "customers": 1912,
+          "flagged_high_risk_rate": 0.23901673640167365,
+          "favorable_rate": 0.7609832635983264,
+          "actual_default_rate": 0.223326359832636
+        },
+        {
+          "group": "30-39",
+          "customers": 2198,
+          "flagged_high_risk_rate": 0.20063694267515925,
+          "favorable_rate": 0.7993630573248408,
+          "actual_default_rate": 0.20609645131938126
+        },
+        {
+          "group": "40-49",
+          "customers": 1341,
+          "flagged_high_risk_rate": 0.23415361670395227,
+          "favorable_rate": 0.7658463832960477,
+          "actual_default_rate": 0.232662192393736
+        },
+        {
+          "group": "50+",
+          "customers": 549,
+          "flagged_high_risk_rate": 0.26958105646630237,
+          "favorable_rate": 0.7304189435336976,
+          "actual_default_rate": 0.2459016393442623
+        }
+      ],
+      "demographic_parity_difference": 0.06894411379114312,
+      "disparate_impact_ratio": 0.9137511883250241
+    }
+  },
+  "shap_base_value": -1.26802659034729
+}

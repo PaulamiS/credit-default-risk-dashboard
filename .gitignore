@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+# Raw data is not committed (download it, see README)
+data/*
+!data/.gitkeep
